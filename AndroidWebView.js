@@ -10,8 +10,8 @@
  */
 import React, {
   Component,
-  PropTypes,
 } from 'react';
+import PropTypes from 'prop-types';
 import ReactNative, {
   EdgeInsetsPropType,
   ActivityIndicator,
@@ -212,6 +212,11 @@ class AndroidWebView extends Component {
      * @platform android
      */
     allowUniversalAccessFromFileURLs: PropTypes.bool,
+
+    mixedContentMode: PropTypes.string,
+    urlPrefixesForDefaultIntent: PropTypes.array,
+    saveFormDataDisabled: PropTypes.bool,
+    thirdPartyCookiesEnabled: PropTypes.bool,
   };
 
   static defaultProps = {
